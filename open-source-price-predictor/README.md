@@ -11,6 +11,22 @@ The workflow runs in four stages:
 3. **Fine-tuning** — quantize Llama 3.2 3B to 4-bit and fine-tune it with **QLoRA** (via `peft`'s `LoraConfig` and `trl`'s `SFTTrainer`), tracked with Weights & Biases. Designed to run on Google Colab (a free T4 GPU for `LITE_MODE`, or a paid GPU for the full dataset/run).
 4. **Evaluation & analysis** — run the fine-tuned model on a held-out test set, score it with a custom `Tester` (average error, MSE, R², color-coded scatter plots), and compare against the human benchmark (~$87.62 avg error) and GPT-4.1-nano (~$62.51 avg error).
 
+
+## Application Preview
+
+### Weights & Biases Training Dashboard
+
+<p align="center">
+  <img src="asset/price_output_1_wandb.png" alt="Weights & Biases Training Dashboard" width="900">
+</p>
+
+### Model Evaluation Results
+
+<p align="center">
+  <img src="asset/price_output_2_scatter.png" alt="Price Prediction Scatter Plot" width="900">
+</p>
+
+
 ## Files
 
 | File / Folder | Description |
